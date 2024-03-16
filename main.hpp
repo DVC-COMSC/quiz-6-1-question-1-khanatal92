@@ -31,3 +31,19 @@ bool isPrime(int num) {
     }
     return true;
 }
+
+// Function to find the next prime number greater than 'begin'
+int getNextPrime(int begin) {
+    int next = begin + 1;
+    while (!isPrime(next))
+        next++;
+    return next;
+}
+
+// Function to find the previous prime number less than 'end'
+int getPrevPrime(int end) {
+    int prev = end - 1;
+    while (!isPrime(prev))
+        prev--;
+    return prev;
+}
